@@ -1,0 +1,80 @@
+# ==========================================
+# TIME Public School & TIMES DIGITAL
+# Root .gitignore
+# ==========================================
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Build output
+dist/
+**/dist/
+build/
+**/build/
+.vite/
+**/.vite/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Local uploads / storage
+uploads/
+**/uploads/
+storage/
+**/storage/
+
+# Coverage / test output
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# IDE / Editors
+.idea/
+*.iml
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local databases / database dumps
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+
+# Certificates / private keys
+*.pem
+*.key
+*.crt
+*.p12
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo

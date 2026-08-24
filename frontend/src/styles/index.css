@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Primary Forest Green Palette */
+  --color-primary-green: #164A35;
+  --color-dark-green: #103728;
+  --color-forest-green: #1E6045;
+
+  /* Muted Gold Accent Palette */
+  --color-muted-gold: #C5A55A;
+  --color-light-gold: #E3D2A0;
+
+  /* Warm Cream Backgrounds */
+  --color-warm-cream: #FAF8F2;
+  --color-light-cream: #F3F0E7;
+
+  /* Neutrals & Text */
+  --color-brand-white: #FFFFFF;
+  --color-primary-text: #17231D;
+  --color-secondary-text: #68736D;
+  --color-brand-border: #E5E1D7;
+
+  /* Semantic Feedback */
+  --color-semantic-success: #2F7D57;
+  --color-semantic-error: #C94A4A;
+  --color-semantic-warning: #B88332;
+
+  /* Responsive Breakpoints */
+  --breakpoint-xs: 360px;
+}
+
+/* Base Body Styles */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAF8F2;
+  color: #17231D;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Custom Scrollbar Utilities */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Focus and Accessibility */
+:focus-visible {
+  outline: 2px solid #164A35;
+  outline-offset: 2px;
+}
+
+/* Animation Reveal Helpers */
+.anim-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
